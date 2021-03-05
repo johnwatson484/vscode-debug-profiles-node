@@ -2,7 +2,7 @@
   "name": "vscode-debug-profiles",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "start": "node app",
     "start:watch": "nodemon app"
