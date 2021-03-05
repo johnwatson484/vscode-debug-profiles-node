@@ -14,11 +14,20 @@
       "type": "pwa-node"
     },
     {
+      "name": "Client",
       "type": "pwa-chrome",
       "request": "launch",
-      "name": "Client",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Docker: Server Attach",
+      "type": "node",
+      "request": "attach",
+      "remoteRoot": "/home/node",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
     }
   ],
   "compounds": [

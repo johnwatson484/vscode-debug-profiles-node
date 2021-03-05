@@ -5,7 +5,7 @@
   "main": "app/index.js",
   "scripts": {
     "start": "node app",
-    "start:watch": "nodemon app",
+    "start:watch": "nodemon --inspect=0.0.0.0 app",
     "test": "jest --runInBand",
     "test:watch": "jest --coverage=false --onlyChanged --watch --runInBand"
   },
