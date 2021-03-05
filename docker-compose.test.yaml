@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      target: development
+    command: npm run test
+    volumes:
+      - ./app/:/home/node/app/
+      - ./package.json:/home/node/package.json
+      - ./test/unit/:/home/node/test/unit/
+      - ./test-output/:/home/node/test-output/      
