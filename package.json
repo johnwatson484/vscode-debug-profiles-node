@@ -1,0 +1,24 @@
+{
+  "name": "vscode-debug-profiles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "start:watch": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnwatson484/vscode-debug-profiles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnwatson484/vscode-debug-profiles/issues"
+  },
+  "homepage": "https://github.com/johnwatson484/vscode-debug-profiles#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
