@@ -55,6 +55,17 @@
       "postDebugTask": "compose-debug-down"
     },
     {
+      "name": "Docker: Jest Attach Launch",
+      "type": "node",
+      "request": "attach",
+      "remoteRoot": "/home/node",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "preLaunchTask": "compose-test-debug-up",
+      "postDebugTask": "compose-test-debug-down"
+    },
+    {
       "name": "Jest All",
       "type": "node",
       "request": "launch",
