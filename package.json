@@ -6,8 +6,10 @@
   "scripts": {
     "start": "node app",
     "start:watch": "nodemon --inspect=0.0.0.0 app",
+    "start:debug": "nodemon --inspect-brk=0.0.0.0 app",
     "test": "jest --runInBand",
-    "test:watch": "jest --coverage=false --onlyChanged --watch --runInBand"
+    "test:watch": "jest --coverage=false --onlyChanged --watch --runInBand",
+    "test:debug": "node --inspect-brk=0.0.0.0 ./node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",

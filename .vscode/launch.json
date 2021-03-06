@@ -35,7 +35,7 @@
       "webRoot": "${workspaceFolder}"
     },
     {
-      "name": "Docker: Server Attach",
+      "name": "Docker: Attach",
       "type": "node",
       "request": "attach",
       "remoteRoot": "/home/node",
@@ -44,10 +44,15 @@
       ]
     },
     {
-      "name": "Docker: Server Launch",
-      "type": "docker",
-      "request": "launch",
-      "platform": "node"
+      "name": "Docker: Attach Launch",
+      "type": "node",
+      "request": "attach",
+      "remoteRoot": "/home/node",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "preLaunchTask": "compose-up",
+      "postDebugTask": "compose-down"
     },
     {
       "name": "Jest All",

@@ -3,4 +3,3 @@ services:
   app:
     build: .
     image: app
-    container_name: app

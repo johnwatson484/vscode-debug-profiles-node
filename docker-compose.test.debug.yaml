@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  app:
+    command: npm run test:debug
+    ports:
+      - "9229:9229"
