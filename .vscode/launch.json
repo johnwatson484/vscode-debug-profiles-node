@@ -51,8 +51,8 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "preLaunchTask": "compose-up",
-      "postDebugTask": "compose-down"
+      "preLaunchTask": "compose-debug-up",
+      "postDebugTask": "compose-debug-down"
     },
     {
       "name": "Jest All",
