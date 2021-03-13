@@ -9,7 +9,8 @@
       "program": "${workspaceFolder}/app",
       "request": "launch",
       "skipFiles": [
-        "<node_internals>/**"
+        "<node_internals>/**",
+        "**/node_modules/**"
       ],
       "type": "pwa-node",
       "serverReadyAction": {
@@ -23,7 +24,8 @@
       "program": "${workspaceFolder}/app",
       "request": "launch",
       "skipFiles": [
-        "<node_internals>/**"
+        "<node_internals>/**",
+        "**/node_modules/**"
       ],
       "type": "pwa-node"
     },
@@ -41,7 +43,8 @@
       "restart": true,
       "remoteRoot": "/home/node",
       "skipFiles": [
-        "<node_internals>/**"
+        "<node_internals>/**",
+        "**/node_modules/**"
       ]
     },
     {
@@ -51,7 +54,8 @@
       "remoteRoot": "/home/node",
       "restart": true,
       "skipFiles": [
-        "<node_internals>/**"
+        "<node_internals>/**",
+        "**/node_modules/**"
       ],
       "preLaunchTask": "compose-debug-up",
       "postDebugTask": "compose-debug-down"
@@ -62,12 +66,14 @@
       "request": "attach",
       "remoteRoot": "/home/node",
       "skipFiles": [
-        "<node_internals>/**"
+        "<node_internals>/**",
+        "**/node_modules/**"
       ],
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true,
-      "sourceMaps": false,
-      "restart": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      },
       "preLaunchTask": "compose-test-debug-up",
       "postDebugTask": "compose-test-debug-down"
     },
@@ -78,6 +84,10 @@
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
         "--runInBand"
+      ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
@@ -95,6 +105,10 @@
         "${fileBasenameNoExtension}",
         "--config",
         "jest.config.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
