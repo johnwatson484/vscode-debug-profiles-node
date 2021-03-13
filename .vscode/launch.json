@@ -38,6 +38,7 @@
       "name": "Docker: Attach",
       "type": "node",
       "request": "attach",
+      "restart": true,
       "remoteRoot": "/home/node",
       "skipFiles": [
         "<node_internals>/**"
@@ -48,6 +49,7 @@
       "type": "node",
       "request": "attach",
       "remoteRoot": "/home/node",
+      "restart": true,
       "skipFiles": [
         "<node_internals>/**"
       ],
@@ -62,6 +64,10 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "sourceMaps": false,
+      "restart": true,
       "preLaunchTask": "compose-test-debug-up",
       "postDebugTask": "compose-test-debug-down"
     },
