@@ -5,6 +5,32 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Docker: Attach",
+      "type": "node",
+      "request": "attach",
+      "restart": true,
+      "port": 9229,
+      "remoteRoot": "/home/node",
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "name": "Docker: Attach Launch",
+      "type": "node",
+      "request": "attach",
+      "remoteRoot": "/home/node",
+      "restart": true,
+      "port": 9229,
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/node_modules/**"
+      ],
+      "preLaunchTask": "compose-debug-up",
+      "postDebugTask": "compose-debug-down"
+    },
+    {
       "name": "Node: Launch",
       "program": "${workspaceFolder}/app",
       "request": "launch",
@@ -37,34 +63,11 @@
       "webRoot": "${workspaceFolder}"
     },
     {
-      "name": "Docker: Attach",
-      "type": "node",
-      "request": "attach",
-      "restart": true,
-      "remoteRoot": "/home/node",
-      "skipFiles": [
-        "<node_internals>/**",
-        "**/node_modules/**"
-      ]
-    },
-    {
-      "name": "Docker: Attach Launch",
-      "type": "node",
-      "request": "attach",
-      "remoteRoot": "/home/node",
-      "restart": true,
-      "skipFiles": [
-        "<node_internals>/**",
-        "**/node_modules/**"
-      ],
-      "preLaunchTask": "compose-debug-up",
-      "postDebugTask": "compose-debug-down"
-    },
-    {
       "name": "Docker: Jest Attach Launch",
       "type": "node",
       "request": "attach",
       "remoteRoot": "/home/node",
+      "port": 9229,
       "skipFiles": [
         "<node_internals>/**",
         "**/node_modules/**"
