@@ -2,3 +2,5 @@ version: '3.8'
 services:
   app:
     command: npm run test:watch
+    volumes:
+      - ./.git:/home/node/.git

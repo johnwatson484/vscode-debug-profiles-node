@@ -3,3 +3,5 @@ services:
   app:
     build: .
     image: app
+    environment:
+      PORT: 3000

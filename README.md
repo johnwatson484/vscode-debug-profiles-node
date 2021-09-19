@@ -164,6 +164,29 @@ Start application in a container using Docker Compose and attach debugger.  By d
 }
 ```
 
+### Docker: Jest Attach
+Attach debugger to running Docker container running Jest tests.  By default it will use port `9229`, but this can be configured with the `port` property.
+
+```
+{
+  "name": "Docker: Jest Attach",
+  "type": "node",
+  "request": "attach",
+  "port": 9229,
+  "trace": true,
+  "restart": true,
+  "timeout": 10000,
+  "remoteRoot": "/home/node",
+  "disableOptimisticBPs": true,
+  "internalConsoleOptions": "neverOpen",
+  "continueOnAttach": true,
+  "skipFiles": [
+    "<node_internals>/**",
+    "**/node_modules/**"
+  ]
+}
+```
+
 ### Docker: Jest Attach Launch
 Run all Jest tests with debugger attached in a Docker container.
 
