@@ -8,6 +8,7 @@
     "start:watch": "nodemon --inspect=0.0.0.0 app",
     "start:debug": "nodemon --inspect-brk=0.0.0.0 app",
     "test": "jest --runInBand",
+    "test:lint": "eslint",
     "test:watch": "jest --coverage=false --onlyChanged --watch --runInBand",
     "test:debug": "node --inspect-brk=0.0.0.0 ./node_modules/jest/bin/jest.js --runInBand --no-cache --watchAll"
   },
@@ -22,23 +23,12 @@
   },
   "homepage": "https://github.com/johnwatson484/vscode-debug-profiles#readme",
   "dependencies": {
-    "@hapi/hapi": "^20.1.5",
-    "nodemon": "^2.0.12"
+    "@hapi/hapi": "20.1.5",
+    "nodemon": "3.1.4"
   },
   "devDependencies": {
-    "jest": "^27.2.0",
-    "standard": "^16.0.3"
-  },
-  "standard": {
-    "globals": [
-      "describe",
-      "beforeEach",
-      "expect",
-      "test",
-      "afterEach",
-      "jest",
-      "beforeAll",
-      "afterAll"
-    ]
+    "eslint": "9.7.0",
+    "jest": "27.2.0",
+    "neostandard": "0.11.1"
   }
 }

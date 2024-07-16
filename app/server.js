@@ -1,7 +1,7 @@
 const Hapi = require('@hapi/hapi')
 
 const server = Hapi.server({
-  port: process.env.PORT
+  port: process.env.PORT,
 })
 
 const routes = [].concat(

@@ -8,7 +8,7 @@ describe('Home test', () => {
   test('GET /healthz route returns 200', async () => {
     const options = {
       method: 'GET',
-      url: '/'
+      url: '/',
     }
     const response = await server.inject(options)
     expect(response.statusCode).toBe(200)
